@@ -1,0 +1,2556 @@
+:root {
+  scrollbar-width: none;
+  scrollbar-color: var(--bgInverse2) transparent;
+  scroll-behavior: smooth;
+
+  --bg1: #fff;
+  --bg2: #d7d7d7;
+  --bgInverse: #595959;
+  --bgInverse2: #444;
+
+  --accent: transparen;
+
+  --title: "Crimson Text", serif;
+  --titleL: "Crimson Text", serif;
+  --titleEL: "Crimson Text", serif;
+  --titleSB: "Crimson Text", serif;
+  --titleB: "Crimson Text", serif;
+  --titleEB: "Crimson Text", serif;
+  --title2: "Crimson Text", serif;
+  --body: "Oxygen", serif;
+
+  --lightOutline: var(--bg1) 1px 0px 0px, var(--bg1) 0.540302px 0.841471px 0px,
+    var(--bg1) -0.416147px 0.909297px 0px, var(--bg1) -0.989993px 0.14112px 0px,
+    var(--bg1) -0.653644px -0.756803px 0px,
+    var(--bg1) 0.283662px -0.958924px 0px, var(--bg1) 0.96017px -0.279416px 0px;
+  --darkOutline: var(--bgInverse) 1px 0px 0px,
+    var(--bgInverse) 0.540302px 0.841471px 0px,
+    var(--bgInverse) -0.416147px 0.909297px 0px,
+    var(--bgInverse) -0.989993px 0.14112px 0px,
+    var(--bgInverse) -0.653644px -0.756803px 0px,
+    var(--bgInverse) 0.283662px -0.958924px 0px,
+    var(--bgInverse) 0.96017px -0.279416px 0px;
+
+  --atemporalisRender: url();
+  --atemporalisRender2: url();
+  --atemporalisBorder: url("./assets-c/bg-pattern.png");
+  --atemporalisCat: url();
+  --atemporalisIcon: url();
+
+  --roseImg: url();
+  --roseFill: url();
+}
+body {
+  margin: 0px;
+  background-color: var(--bg1);
+  font-family: var(--body);
+}
+body.darkmode {
+  --bg1: #000;
+  --bg2: #2b2b2b;
+  --bg3: #333;
+  --bgInverse: #999;
+  --bgInverse2: #aaa;
+  --bgInverse3: #ccc;
+  --lightOutline: var(--bg1) 1px 0px 0px, var(--bg1) 0.540302px 0.841471px 0px,
+    var(--bg1) -0.416147px 0.909297px 0px, var(--bg1) -0.989993px 0.14112px 0px,
+    var(--bg1) -0.653644px -0.756803px 0px,
+    var(--bg1) 0.283662px -0.958924px 0px, var(--bg1) 0.96017px -0.279416px 0px;
+  --darkOutline: var(--bgInverse) 1px 0px 0px,
+    var(--bgInverse) 0.540302px 0.841471px 0px,
+    var(--bgInverse) -0.416147px 0.909297px 0px,
+    var(--bgInverse) -0.989993px 0.14112px 0px,
+    var(--bgInverse) -0.653644px -0.756803px 0px,
+    var(--bgInverse) 0.283662px -0.958924px 0px,
+    var(--bgInverse) 0.96017px -0.279416px 0px;
+}
+.GID-hope {
+  --accent: #b39a50;
+}
+.GID-fate {
+  --accent: #986fa0;
+}
+.GID-unity {
+  --accent: #a3757d;
+}
+.GID-liberty {
+  --accent: #9da2cc;
+}
+.GID-fortune {
+  --accent: #c77a5a;
+}
+.GID-entropy {
+  --accent: #829199;
+}
+.GID-passion {
+  --accent: #ba6a87;
+}
+.GID-knowledge {
+  --accent: #8faa90;
+}
+.GID-vitality {
+  --accent: #b28c70;
+}
+.GID-destruction {
+  --accent: #9a8c98;
+}
+.GID-space {
+  --accent: #a1b66f;
+}
+.GID-time {
+  --accent: #b6565d;
+}
+.GID-order {
+  --accent: #897666;
+}
+.GID-unbound {
+  --accent: #80aeb3;
+}
+
+.atemporalis {
+  padding: 50px;
+  padding: clamp(35px, 5vw, 125px);
+  color: var(--bgInverse);
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.atemporalis::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 27px;
+  left: 2px;
+  right: 2px;
+  /* background: linear-gradient(to bottom, var(--accent), transparent); */
+  background-position: bottom center;
+  background-size: 500% 500%;
+  height: 150px;
+  pointer-events: none;
+}
+@media (max-width: 1149px) {
+  .atemporalis::before {
+    background-size: 200% 200%;
+  }
+}
+.atemporalis::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  /* background: linear-gradient(to top, var(--accent), transparent); */
+  background-position: top center;
+  background-size: 500% 500%;
+  height: 600px;
+  pointer-events: none;
+}
+.atemporalis-border {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 24px;
+  z-index: 100000000;
+  background-color: var(--bgInverse2);
+  border-bottom: solid 1px var(--bgInverse2);
+  box-shadow: 0px 2px 0px var(--bg1);
+  transition: height 0.5s;
+  overflow: hidden;
+}
+.atemporalis-border div {
+  background-color: var(--accent);
+  background-image: var(--atemporalisBorder);
+  background-size: cover;
+  background-position: bottom;
+  mix-blend-mode: lighten;
+  width: 100%;
+  height: 100%;
+  transition: height 0.5s;
+}
+.darkmode .atemporalis-border {
+  border-color: var(--bgInverse3);
+  background-color: var(--accent);
+}
+.darkmode .atemporalis-border div {
+  background-color: var(--bgInverse3);
+}
+
+.atemporalis-menu-back {
+  background-color: var(--bg1);
+  position: fixed;
+  z-index: 10;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  top: 27px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+.menu .atemporalis-menu-back {
+  opacity: 1;
+}
+
+.atemporalis-menu-bulk {
+  background-color: var(--bg1);
+  padding: clamp(35px, 5vw, 125px);
+  display: grid;
+  grid-template-rows: 210px auto;
+  gap: 50px;
+  position: fixed;
+  z-index: 11;
+  top: 27px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+  opacity: 0;
+  transition: top 0.5s, opacity 0.5s;
+  font: 13px / 20px var(--body);
+  text-align: justify;
+  letter-spacing: 0.25px;
+}
+.menu .atemporalis-menu-bulk {
+  top: -23px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.atemporalis-menu-name {
+  margin: -25px 0px 0px 0px;
+  padding-bottom: 15px;
+  position: relative;
+  display: flex;
+  gap: 50px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.atemporalis-menu-name span {
+  font: 121px / 85px var(--titleEB);
+  font: 100px / 85px var(--title2);
+  text-transform: uppercase;
+  display: block;
+}
+.atemporalis-menu-name div {
+  color: var(--accent);
+}
+.atemporalis-menu-name p {
+  margin: 0px 0px -18px 0px;
+  padding: 0px;
+  text-align: right;
+}
+.atemporalis-menu-name p b,
+.atemporalis-menu-name p a {
+  text-transform: uppercase;
+  font-weight: 800 !important;
+}
+.atemporalis-menu-name p a {
+  text-decoration: none;
+  color: var(--accent);
+  transition: color 0.5s;
+}
+.atemporalis-menu-name p a:hover {
+  color: var(--bgInverse);
+}
+.darkmode .atemporalis-menu-name p b,
+.darkmode .atemporalis-menu-name p a:hover {
+  color: var(--bgInverse3);
+}
+.atemporalis-menu-bulk ul {
+  list-style-type: none;
+  position: absolute;
+  z-index: 1;
+  top: clamp(35px, 5vw, 125px);
+  left: clamp(35px, 5vw, 125px);
+  margin: 25px 0px 0px -60px;
+}
+.atemporalis-menu-bulk li:nth-child(1) {
+  display: block;
+  height: 60px;
+  width: 88px;
+  position: absolute;
+  -webkit-mask-image: var(--roseFill);
+  mask-image: var(--roseFill);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.atemporalis-menu-bulk li:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--accent);
+}
+.atemporalis-menu-bulk li:nth-child(2) {
+  display: block;
+  height: 60px;
+  width: 88px;
+  position: absolute;
+  -webkit-mask-image: var(--roseImg);
+  mask-image: var(--roseImg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.atemporalis-menu-bulk li:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bgInverse2);
+}
+.darkmode .atemporalis-menu-bulk li:nth-child(1)::before {
+  background-color: var(--bg1);
+}
+.darkmode .atemporalis-menu-bulk li:nth-child(2)::before {
+  background-color: var(--accent);
+}
+.atemporalis-menu-border {
+  border: solid 1px var(--bgInverse);
+  outline: solid 4px var(--bg1);
+  outline-offset: -5px;
+  background-color: var(--bgInverse);
+  grid-column: 1 / 4;
+}
+.atemporalis-menu-border div {
+  height: 100%;
+  width: 100%;
+  background-color: var(--accent);
+  mix-blend-mode: lighten;
+  background-image: var(--atemporalisBorder);
+  background-position: center;
+  background-size: cover;
+}
+
+.atemporalis-menu-grid {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+.atemporalis-menu-links h1 {
+  border-bottom: solid 1px var(--accent);
+  display: flex;
+  gap: 15px;
+  height: 5px;
+  margin: 10px 0px 35px 0px;
+}
+.atemporalis-menu-links h1 div {
+  background-color: var(--bg1);
+  padding: 0px 10px 0px 13px;
+  font: 800 10px / 10px var(--body);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: -5px;
+  white-space: nowrap;
+}
+.atemporalis-menu-links h1 div:nth-child(1) {
+  font: 26px / 10px var(--titleEB);
+  text-transform: lowercase;
+  color: var(--accent);
+  padding: 0px 10px 5px 0px;
+  margin-top: -6px;
+}
+.atemporalis-menu-links h1 + div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 35px;
+}
+.atemporalis-menu-links a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font: 800 11px / 10px var(--body);
+  letter-spacing: 0.5px;
+  color: var(--bgInverse);
+  white-space: nowrap;
+  transition: color 0.5s;
+}
+.atemporalis-menu-links a:hover {
+  color: var(--accent);
+}
+.atemporalis-menu-sub {
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap;
+  max-height: 138px;
+  overflow: auto;
+  padding-right: 10px;
+  scrollbar-color: var(--accent) transparent;
+  scrollbar-width: thin;
+}
+.atemporalis-menu-sub a {
+  display: block;
+  border: solid 1px var(--bgInverse);
+  height: 58px;
+  width: 58px;
+  outline: solid 2px var(--bg1);
+  outline-offset: -3px;
+  padding: 2px;
+  background-color: var(--bgInverse);
+}
+.atemporalis-menu-sub a div {
+  height: 100%;
+  width: 100%;
+  background-color: var(--accent);
+  background-image: var(--atemporalisIcon);
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: lighten;
+  background-blend-mode: multiply;
+  transition: background-color 0.5s;
+}
+.atemporalis-menu-sub a:hover div {
+  background-color: #fff;
+}
+.darkmode .atemporalis-menu-sub a,
+.darkmode .atemporalis-menu-border {
+  mix-blend-mode: lighten;
+}
+.darkmode .atemporalis-menu-sub a div,
+.darkmode .atemporalis-menu-border div {
+  mix-blend-mode: normal;
+}
+@media (max-width: 1149px) {
+  .menu .atemporalis-menu-bulk {
+    display: block;
+  }
+  .atemporalis-menu-bulk {
+    padding: 50px;
+    height: calc(100vh - 80px);
+    overflow: auto;
+    scrollbar-color: var(--accent) transparent;
+    scrollbar-width: thin;
+  }
+  .atemporalis-menu-name {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 35px;
+  }
+  .atemporalis-menu-name span {
+    font: 42px / 30px var(--titleEB);
+    font: 36px / 30px var(--title2);
+    white-space: nowrap;
+  }
+  .atemporalis-menu-name p {
+    text-align: left;
+  }
+  .atemporalis-menu-bulk ul {
+    display: none;
+  }
+  .atemporalis-menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .atemporalis-menu-border {
+    display: none;
+  }
+}
+
+.atemporalis-menu {
+  position: fixed;
+  z-index: 100000001;
+  top: clamp(35px, 5vw, 125px);
+  margin-top: 25px;
+  right: clamp(35px, 5vw, 125px);
+  border: solid 1px var(--bgInverse);
+  background-color: var(--bg1);
+  font: 800 11px / 10px var(--body);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: solid 2px var(--bg1);
+  display: flex;
+  transition: margin-top 0.5s;
+}
+.atemporalis-menu-left {
+  position: relative;
+  padding: 14px;
+  box-shadow: 1px 0px 0px var(--bgInverse);
+  margin-right: 1px;
+  background: linear-gradient(-135deg, var(--bgInverse2) 25%, var(--accent));
+  background-size: 400% 100%;
+  background-position: 75% 0%;
+  outline: solid 2px var(--bg1);
+  color: var(--bg1);
+  outline-offset: -2px;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+}
+.atemporalis-menu-left:hover {
+  color: var(--accent);
+}
+.atemporalis-menu-left b {
+  position: relative;
+  z-index: 1;
+}
+.atemporalis-menu-left b::before {
+  content: "full";
+}
+.menu .atemporalis-menu-left b::before {
+  content: "close";
+}
+.atemporalis-menu-right {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  padding: 1px 12px 0px 12px;
+  font-size: 13px;
+  background-color: var(--bgInverse2);
+  outline: solid 2px var(--bg1);
+  outline-offset: -2px;
+}
+.atemporalis-menu-right a {
+  cursor: pointer;
+  transition: color 0.5s;
+  text-decoration: none;
+  color: var(--bg1);
+}
+.atemporalis-menu-right a:hover {
+  color: var(--accent);
+}
+.darkmode .atemporalis-menu-left {
+  background: var(--accent);
+}
+.darkmode .atemporalis-menu-right {
+  background-color: var(--bgInverse3);
+}
+.darkmode .atemporalis-menu-left:hover {
+  background-color: var(--bgInverse3);
+  color: var(--bg1);
+}
+@media (max-width: 1149px) {
+  .atemporalis-border {
+    height: 38px;
+  }
+  .atemporalis-menu {
+    top: -1px;
+    right: -1px;
+    margin-top: 0px;
+    background-color: transparent;
+    outline: none;
+    color: var(--bg1);
+    border-color: transparent;
+  }
+  .atemporalis-menu-left {
+    outline: none;
+    background: transparent !important;
+    box-shadow: none;
+    padding-right: 0px;
+  }
+  .atemporalis-menu-left b {
+    text-shadow: var(--darkOutline);
+  }
+  .atemporalis-menu-right {
+    gap: 12px;
+    outline: none;
+    background-color: transparent !important;
+  }
+  .atemporalis-menu-right a {
+    color: var(--bg1);
+    font-size: 14px;
+  }
+  .atemporalis-menu-right a:first-of-type,
+  .atemporalis-menu-right a:last-of-type {
+    display: none;
+  }
+  .darkmode .atemporalis-menu-left:hover,
+  .darkmode .atemporalis-menu-right a:hover {
+    color: var(--bgInverse3);
+  }
+}
+
+.atemporalis-header {
+  position: relative;
+  height: 350px;
+}
+.atemporalis-header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 550px;
+  right: 0px;
+  border-bottom: solid 1px var(--bgInverse);
+}
+.atemporalis-render {
+  mask-image: var(--atemporalisRender);
+  mask-size: auto 100%;
+  mask-repeat: no-repeat;
+  mask-position: top left;
+  -webkit-mask-image: var(--atemporalisRender);
+  -webkit-mask-size: auto 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: top left;
+  height: 1000px;
+  width: 700px;
+  position: absolute;
+  top: -300px;
+  left: -75px;
+  pointer-events: none;
+}
+.atemporalis-render::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--bgInverse2) 400px,
+    var(--accent)
+  );
+  background-size: 150% 150%;
+  background-position: top center;
+}
+.darkmode .atemporalis-render::before {
+  background: linear-gradient(
+    to bottom,
+    var(--bgInverse2) 500px,
+    var(--accent)
+  );
+  background-size: 100% 100%;
+}
+
+.atemporalis-header input {
+  display: none;
+}
+.atemporalis-header-label {
+  position: absolute;
+  outline: solid 2px var(--bg1);
+  outline-offset: -3px;
+  bottom: 60px;
+  right: 0px;
+  border: solid 1px var(--bgInverse);
+  padding: 13px 0px 15px 0px;
+  font: 16px / 10px var(--titleEB);
+  letter-spacing: 1.5px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--bg1);
+  text-shadow: var(--lightOutline);
+  background: linear-gradient(-135deg, transparent 25%, var(--accent));
+  background-size: 400% 100%;
+  background-position: 99% 0%;
+  transition: background-position 0.5s, color 0.5s;
+}
+.atemporalis-header-label:hover,
+.atemporalis-header input:checked + label {
+  background-position: 75% 0%;
+  color: var(--accent);
+}
+@media (max-width: 1149px) {
+  .atemporalis-header-label {
+    display: none;
+  }
+}
+
+.atemporalis-name {
+  font: 115px / 125px var(--titleEB);
+  position: absolute;
+  left: 465px;
+  bottom: 100px;
+  opacity: 0;
+  text-shadow: var(--darkOutline);
+  color: var(--bg1);
+  transition: bottom 0.5s, opacity 0.5s;
+  pointer-event: none;
+}
+.atemporalis-name span:last-of-type {
+  display: none;
+  font: 50px / 75px var(--titleEB);
+  text-align: center;
+}
+#atemporalis-header-tab-1:checked ~ .atemporalis-name {
+  opacity: 1;
+  bottom: 60px !important;
+  pointer-event: auto;
+}
+.atemporalis-name::before {
+  padding: 50px 0px;
+  content: "Atemporal";
+  display: block;
+  position: absolute;
+  bottom: -50px;
+  background: linear-gradient(-135deg, transparent 50%, var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  background-size: 300% 100%;
+  background-position: 100% 0%;
+  transition: background-position 0.5s;
+  -webkit-text-stroke: 3px #fff;
+  text-stroke: 3px #fff;
+  mix-blend-mode: multiply;
+}
+.atemporalis-name div:nth-child(1) {
+  height: 60px;
+  width: 88px;
+  position: absolute;
+  top: 55px;
+  left: 450px;
+  -webkit-mask-image: var(--roseFill);
+  mask-image: var(--roseFill);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.atemporalis-name div:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--accent);
+}
+.atemporalis-name div:nth-child(2) {
+  height: 60px;
+  width: 88px;
+  position: absolute;
+  top: 55px;
+  left: 450px;
+  -webkit-mask-image: var(--roseImg);
+  mask-image: var(--roseImg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.atemporalis-name div:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bgInverse2);
+}
+.darkmode .atemporalis-name div:nth-child(1)::before {
+  background-color: var(--bg1);
+}
+.darkmode .atemporalis-name div:nth-child(2)::before {
+  background-color: var(--accent);
+}
+.darkmode .atemporalis-name::before {
+  mix-blend-mode: lighten;
+  -webkit-text-stroke: 3px #000;
+  text-stroke: 3px #000;
+}
+.atemporalis-header:hover .atemporalis-name::before {
+  background-position: 40% 0%;
+}
+.atemporalis-sub {
+  font: 21px / 15px var(--titleEB);
+  text-transform: lowercase;
+  letter-spacing: 10.45px;
+  position: absolute;
+  bottom: 240px;
+  left: 510px;
+  opacity: 0;
+  white-space: nowrap;
+  transition: bottom 0.5s, opacity 0.5s;
+  pointer-event: none;
+}
+#atemporalis-header-tab-1:checked ~ .atemporalis-sub {
+  opacity: 1;
+  bottom: 200px !important;
+  pointer-event: auto;
+}
+@media (max-width: 1149px) {
+  .atemporalis-render {
+    display: none;
+  }
+  .atemporalis-header {
+    height: 215px !important;
+  }
+  .atemporalis-header::before {
+    border-bottom: none;
+  }
+  .atemporalis-name {
+    position: relative;
+    padding-top: 100px;
+  }
+  .atemporalis-name span:first-of-type {
+    display: none;
+  }
+  .atemporalis-name::before {
+    display: none;
+  }
+  .atemporalis-name div,
+  .atemporalis-sub {
+    display: none;
+  }
+  .atemporalis-name span:last-of-type {
+    display: block;
+  }
+  .atemporalis-nav {
+    margin-left: 0px !important;
+    flex-wrap: wrap;
+    border-bottom: solid 1px var(--bgInverse);
+    padding-bottom: 35px;
+  }
+  .atemporalis-nav::before {
+    display: block;
+    content: "site navigation";
+    border: solid 1px var(--bgInverse);
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font: 800 11px / 9px var(--body);
+    padding: 14px !important;
+    letter-spacing: 1px;
+    color: var(--bgInverse);
+    color: var(--bg1);
+    outline: solid 2px var(--bg1);
+    outline-offset: -3px;
+    background-color: var(--accent);
+  }
+  .atemporalis-nav a::after {
+    display: none !important;
+  }
+  .atemporalis-nav a {
+    border: solid 1px var(--bgInverse);
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font: 800 11px / 9px var(--body);
+    padding: 14px !important;
+    letter-spacing: 1px;
+    color: var(--bgInverse);
+    text-shadow: var(--lightOutline);
+    outline: solid 2px var(--bg1);
+    outline-offset: -3px;
+    background: linear-gradient(-135deg, transparent 30%, var(--accent));
+    background-size: 400% 100%;
+    background-position: 99% 0%;
+    transition: background-position 0.5s, color 0.5s !important;
+  }
+  .atemporalis-nav a:hover {
+    /* background-position: 65% 0%; */
+    color: var(--accent);
+  }
+}
+
+.atemporalis-updates {
+  position: absolute;
+  left: 525px;
+  right: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  bottom: 100px;
+  font: 13px / 20px var(--body);
+  text-align: justify;
+  letter-spacing: 0.25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+#atemporalis-header-tab-2:checked ~ .atemporalis-updates {
+  bottom: 60px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.atemporalis-updates div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-end;
+  transition: opacity 0.5s;
+}
+.atemporalis-updates div:nth-child(2) {
+  opacity: 0.6;
+}
+.atemporalis-updates div:nth-child(3) {
+  opacity: 0.35;
+}
+.atemporalis-updates div:hover {
+  opacity: 1 !important;
+}
+.atemporalis-updates b:first-of-type {
+  background: linear-gradient(-135deg, var(--bgInverse) 25%, var(--accent));
+  background-size: 400% 100%;
+  background-position: 40% 0%;
+  max-width: fit-content;
+  display: block;
+  outline: solid 1px var(--bgInverse);
+  outline-offset: 1px;
+  margin: 2px;
+  color: var(--bg1);
+  padding: 12px 12px 14px 15px;
+  font: 12px / 10px var(--titleEB);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.atemporalis-updates p {
+  max-height: 160px;
+  overflow: auto;
+  padding-right: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+  margin: 0px;
+}
+@media (max-width: 1365px) {
+  .atemporalis-updates {
+    grid-template-columns: 1fr 1fr;
+  }
+  .atemporalis-updates div:nth-child(3) {
+    display: none !important;
+  }
+}
+
+.atemporalis-creds {
+  top: 25px;
+  left: 435px;
+  left: 525px;
+  right: 150px;
+  bottom: 100px;
+  font: 13px / 20px var(--body);
+  text-align: justify;
+  letter-spacing: 0.25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: bottom 0.5s, opacity 0.5s;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  gap: 35px;
+}
+#atemporalis-header-tab-3:checked ~ .atemporalis-creds {
+  bottom: 60px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.atemporalis-staff {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.atemporalis-staff h1 {
+  margin: 0px 0px 40px 0px;
+  font: 85px / 40px var(--titleEB);
+  color: var(--accent);
+  grid-column: 1 / 5;
+  text-align: right;
+}
+.atemporalis-staff a {
+  display: block;
+  border: solid 1px var(--bgInverse);
+  background-color: var(--bgInverse);
+  height: 63px;
+  width: 63px;
+  outline: solid 4px var(--bg1);
+  outline-offset: -5px;
+}
+.atemporalis-staff div {
+  height: 100%;
+  width: 100%;
+  background-color: var(--accent);
+  background-image: var(--atemporalisIcon);
+  background-blend-mode: multiply;
+  background-size: cover;
+  mix-blend-mode: lighten;
+  transition: background-color 0.5s;
+}
+.atemporalis-staff a:hover div {
+  background-color: #fff;
+}
+.atemporalis-creds2 {
+  max-height: 180px;
+  overflow: auto;
+  padding-right: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+.atemporalis-creds2 b,
+.atemporalis-creds2 a {
+  text-transform: uppercase;
+  font-weight: 800 !important;
+}
+.atemporalis-creds2 a {
+  text-decoration: none;
+  color: var(--accent);
+  transition: color 0.5s;
+}
+.atemporalis-creds2 a:hover {
+  color: var(--bgInverse);
+}
+.darkmode .atemporalis-staff a {
+  mix-blend-mode: lighten;
+}
+.darkmode .atemporalis-staff div {
+  mix-blend-mode: normal;
+}
+.darkmode .atemporalis-creds2 b,
+.darkmode .atemporalis-creds2 a:hover {
+  color: var(--bgInverse3);
+}
+
+.atemporalis-nav {
+  margin-left: 585px;
+  display: flex;
+  gap: 10px;
+  font: 800 11px / 9px var(--body);
+  text-transform: uppercase;
+  margin-top: -11px;
+  position: relative;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.atemporalis-nav a {
+  display: block;
+  background-color: var(--bg1);
+  font: 800 11px / 9px var(--body);
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: color 0.5s;
+}
+.atemporalis-nav a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 1px;
+  background-color: var(--bgInverse);
+  position: absolute;
+  bottom: -5px;
+  transition: width 0.5s;
+}
+.atemporalis-nav a:hover::after {
+  width: calc(100% - 21px);
+}
+.atemporalis-nav a:hover {
+  color: var(--accent);
+}
+@media (max-width: 1279px) {
+  .atemporalis-header {
+    height: 600px;
+  }
+  .atemporalis-header::before {
+    left: 0px;
+  }
+  .atemporalis-render {
+    left: 50%;
+    margin-left: -230px;
+    top: -225px;
+    width: 500px;
+    height: 750px;
+  }
+  .atemporalis-render::before {
+    background: linear-gradient(
+      to bottom,
+      var(--bgInverse) 250px,
+      var(--bg1) 90%
+    );
+  }
+  .darkmode .atemporalis-render::before {
+    background: linear-gradient(
+      to bottom,
+      var(--bgInverse) 250px,
+      var(--bg1) 90%
+    );
+    background-size: 100% 100%;
+  }
+  .atemporalis-name {
+    left: 0px;
+  }
+  .atemporalis-sub {
+    left: 15px;
+  }
+  .atemporalis-updates {
+    left: 0px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .atemporalis-updates div:nth-child(3) {
+    display: flex !important;
+  }
+  .atemporalis-creds {
+    left: 0px;
+  }
+  .atemporalis-nav {
+    margin-left: 25px;
+  }
+}
+
+.atemporalis-cat-1 {
+  margin: 30px 15px 0px 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 35px;
+  position: relative;
+}
+.atemporalis-guide {
+  border-bottom: solid 1px var(--bgInverse);
+  padding: 0px 0px 60px 235px;
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 35px;
+  margin-right: -15px;
+}
+.atemporalis-guide-name {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  font: 86px / 86px var(--titleEB);
+  font: 70px / 86px var(--title2);
+  color: var(--bgInverse);
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-align: right;
+  width: 100%;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  letter-spacing: -2px !important;
+}
+.atemporalis-guide-name::before {
+  content: "";
+  display: none;
+  height: 1px;
+  background-color: var(--bgInverse);
+  flex-grow: 1;
+  margin: 35px 0px 0px 0px;
+}
+.atemporalis-guide-name::after {
+  content: "guidebook";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  right: 0px;
+  background: linear-gradient(-135deg, transparent 50%, var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  background-size: 300% 100%;
+  background-position: 100% 0%;
+  transition: background-position 0.5s;
+}
+.atemporalis-guide:hover .atemporalis-guide-name::after {
+  background-position: 30% 0%;
+}
+.atemporalis-guide-blurb {
+  font: 13px / 20px var(--body);
+  text-align: justify;
+  letter-spacing: 0.25px;
+  margin-top: 29px;
+  max-height: 60px;
+  overflow: auto;
+  padding-right: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.atemporalis-guide-links {
+  display: flex;
+  gap: 10px;
+  grid-column: 1 / 3;
+}
+.atemporalis-guide-links a {
+  border: solid 1px var(--bgInverse);
+  text-decoration: none;
+  flex-grow: 1;
+  text-align: center;
+  text-transform: uppercase;
+  font: 800 11px / 9px var(--body);
+  padding: 14px;
+  letter-spacing: 1px;
+  color: var(--bgInverse);
+  text-shadow: var(--lightOutline);
+  outline: solid 2px var(--bg1);
+  outline-offset: -3px;
+  background: linear-gradient(-135deg, transparent 30%, var(--accent));
+  background-size: 400% 100%;
+  background-position: 99% 0%;
+  transition: background-position 0.5s, color 0.5s;
+}
+.atemporalis-guide-links a:hover {
+  background-position: 65% 0%;
+  color: var(--accent);
+}
+@media (max-width: 1365px) {
+  .atemporalis-cat-1 {
+    margin-left: 0px;
+  }
+  .atemporalis-guide {
+    grid-template-columns: 1fr;
+    margin-left: 300px;
+  }
+  .atemporalis-guide-name {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    letter-spacing: 3px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  .atemporalis-guide-name::before {
+    display: block;
+  }
+  .atemporalis-guide-blurb {
+    margin-top: -10px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding-right: 0px;
+  }
+  .atemporalis-guide-links {
+    grid-column: 1 / 2;
+    margin-left: -235px;
+  }
+}
+@media (max-width: 1279px) {
+  .atemporalis-guide {
+    grid-template-columns: auto auto;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  .atemporalis-guide-name {
+    display: block !important;
+    letter-spacing: 0px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  .atemporalis-guide-name::before {
+    display: none;
+  }
+  .atemporalis-guide-blurb {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-top: 29px;
+    padding-right: 20px;
+  }
+  .atemporalis-guide-links {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1149px) {
+  .atemporalis-guide {
+    margin-right: 0px;
+    margin-bottom: 0px;
+    padding: 0px 15px 35px 15px;
+  }
+  .atemporalis-guide-name {
+    grid-column: 1 / 3;
+    text-align: left;
+    font: 51px / 35px var(--titleEB);
+    font: 40px / 35px var(--title2);
+    letter-spacing: -1px !important;
+  }
+  .atemporalis-guide-name::after {
+    left: 0px;
+    right: auto;
+    padding-bottom: 10px;
+  }
+  .atemporalis-guide-blurb {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    margin-top: 0px;
+  }
+  .atemporalis-guide-links {
+    grid-row: 3 / 4;
+    flex-wrap: wrap;
+  }
+}
+
+.atemporalis-board1 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-left: solid 1px var(--bgInverse);
+  padding-left: 40px;
+  position: relative;
+}
+.atemporalis-board1::before,
+.atemporalis-board2::before {
+  content: "";
+  display: block;
+  top: 0px;
+  right: -15px;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  z-index: 1;
+  background: radial-gradient(
+    circle at top right,
+    var(--accent),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+.atemporalis-board1:hover::before,
+.atemporalis-board2:hover::before {
+  opacity: 0.35;
+}
+.darkmode .atemporalis-board1:hover::before,
+.darkmode .atemporalis-board2:hover::before {
+  opacity: 0.1;
+}
+.atemporalis-board1-name {
+  display: block;
+  text-decoration: none;
+  font: 51px / 35px var(--titleEB);
+  font: 40px / 35px var(--title2);
+  letter-spacing: -1px !important;
+  text-transform: uppercase;
+  color: var(--bgInverse);
+  margin-top: 13px;
+  position: relative;
+  border-bottom: solid 1px var(--accent);
+  padding-bottom: 36px;
+  word-spacing: 1000px;
+}
+.atemporalis-board1-name div {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  padding-bottom: 20px;
+  background: linear-gradient(-135deg, transparent 50%, var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  background-size: 300% 100%;
+  background-position: 100% 0%;
+  transition: background-position 0.5s;
+}
+.atemporalis-board1:hover .atemporalis-board1-name div,
+.atemporalis-board2:hover .atemporalis-board1-name div {
+  background-position: 30% 0%;
+}
+.atemporalis-board1-num {
+  display: flex;
+  gap: 10px;
+  margin: -41px 0px 0px 10px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.atemporalis-board1-num div {
+  display: block;
+  background-color: var(--bg1);
+  font: 800 11px / 9px var(--body);
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  white-space: nowrap;
+}
+.atemporalis-board1-desc {
+  font: 13px / 20px var(--body);
+  text-align: justify;
+  letter-spacing: 0.25px;
+  max-height: 80px;
+  overflow: auto;
+  padding-right: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+.atemporalis-board1-recent {
+  display: grid;
+  grid-template-columns: 56px auto;
+  gap: 20px;
+  align-items: flex-start;
+}
+.atemporalis-board1-icon {
+  padding: 2px;
+  border: solid 1px var(--bgInverse);
+  background-color: var(--bgInverse);
+  width: 50px;
+  height: 50px;
+  outline: solid 2px var(--bg1);
+  outline-offset: -3px;
+}
+.darkmode .atemporalis-board1-icon {
+  background-color: var(--bg1);
+  mix-blend-mode: lighten;
+}
+.atemporalis-board1-icon1 {
+  mix-blend-mode: lighten;
+  background-color: var(--accent);
+}
+.atemporalis-board1-icon1 div {
+  height: 50px;
+  width: 50px;
+  background-image: var(--atemporalisIcon);
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%);
+}
+.atemporalis-board1-recent1 {
+  font: 800 11px / 11px var(--body);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  align-self: center;
+}
+.atemporalis-board1-recent1 a {
+  text-decoration: none;
+  color: var(--bgInverse);
+  background: linear-gradient(to right, var(--accent), var(--accent));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.5s;
+  padding-bottom: 2px;
+}
+.atemporalis-board1-recent1 a:hover {
+  background-size: 100% 1px;
+}
+.atemporalis-board1-recent1 a:first-of-type {
+  color: var(--accent);
+  display: block;
+  font: 21px / 15px var(--titleEB);
+  margin: -5px 0px 6px 0px;
+  letter-spacing: 0.5px;
+  max-height: 30px;
+  padding-bottom: 5px;
+  background: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.atemporalis-board1-sub {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 25px;
+}
+.atemporalis-board1-sub a {
+  border: solid 1px var(--bgInverse);
+  text-decoration: none;
+  flex-grow: 1;
+  text-align: center;
+  text-transform: uppercase;
+  font: 800 10px / 10px var(--body);
+  padding: 10px;
+  letter-spacing: 1px;
+  color: var(--bgInverse);
+  text-shadow: var(--lightOutline);
+  outline: solid 2px var(--bg1);
+  outline-offset: -3px;
+  background: linear-gradient(-135deg, transparent 30%, var(--accent));
+  background-size: 400% 100%;
+  background-position: 99% 0%;
+  transition: background-position 0.5s, color 0.5s;
+  white-space: nowrap;
+}
+.atemporalis-board1-sub a:hover {
+  background-position: 65% 0%;
+  color: var(--accent);
+}
+
+.atemporalis-board1.atemporalis-bulletin {
+  padding-left: 0px;
+  border-left: 0px;
+}
+.atemporalis-event {
+  border: solid 1px var(--bgInverse2);
+  outline: solid 2px var(--bg1);
+  outline-offset: -3px;
+  height: 95px;
+  background-color: var(--bgInverse2);
+  display: block;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  margin: 15px 0px -32px 0px;
+}
+.darkmode .atemporalis-event {
+  mix-blend-mode: lighten;
+  background-color: var(--bg1);
+}
+.atemporalis-event1 {
+  background-color: var(--accent);
+  mix-blend-mode: lighten;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+}
+.atemporalis-event1 div {
+  background-image: var(--atemporalisBorder);
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 1149px) {
+  .atemporalis-cat-1 {
+    display: block;
+    margin-right: 0px;
+  }
+  .atemporalis-board1 {
+    border: none;
+    border-top: solid 1px var(--bgInverse);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+  .atemporalis-board1::before {
+    right: 0px;
+    top: 15px;
+  }
+  .atemporalis-board1-sub {
+    flex-wrap: wrap;
+  }
+  .atemporalis-board1.atemporalis-bulletin {
+    border-top: none;
+  }
+}
+
+.atemporalis-bulletin2 {
+  bottom: 25px;
+  left: -300px;
+  position: absolute;
+  width: 248px;
+}
+.atemporalis-bulletin-icon {
+  border: solid 1px var(--bgInverse);
+  padding: 14px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: relative;
+}
+.atemporalis-bulletin-icon div {
+  position: relative;
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background-color: var(--bg1);
+  background-image: var(--atemporalisIcon);
+  background-size: cover;
+  background-position: center;
+}
+.atemporalis-bulletin-icon ul {
+  display: block;
+  font: 10px / 10px var(--body);
+  list-style-type: none;
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  transform: rotate(90deg);
+}
+.atemporalis-bulletin-icon li:nth-child(1) {
+  display: block;
+  height: 60px;
+  width: 88px;
+  position: absolute;
+  -webkit-mask-image: var(--roseFill);
+  mask-image: var(--roseFill);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.atemporalis-bulletin-icon li:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--accent);
+}
+.atemporalis-bulletin-icon li:nth-child(2) {
+  display: block;
+  height: 60px;
+  width: 88px;
+  position: absolute;
+  -webkit-mask-image: var(--roseImg);
+  mask-image: var(--roseImg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.atemporalis-bulletin-icon li:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bgInverse2);
+}
+.darkmode .atemporalis-bulletin-icon li:nth-child(1)::before {
+  background-color: var(--bg1);
+}
+.darkmode .atemporalis-bulletin-icon li:nth-child(2)::before {
+  background-color: var(--accent);
+}
+.atemporalis-bulletin-title {
+  position: relative;
+  z-index: 1;
+  text-align: right;
+  margin: -50px 0px 0px 100px;
+  font: 800 11px / 12px var(--body);
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+}
+.atemporalis-bulletin-title::before {
+  content: "welcoming our newest member";
+}
+.atemporalis-bulletin-title a {
+  display: block;
+  text-decoration: none;
+  color: var(--bg1);
+  font: 50px / 26px var(--titleEB);
+  text-shadow: var(--darkOutline);
+  text-transform: lowercase;
+  margin: 5px 0px 35px -50px;
+  transition: color 0.5s, text-shadow 0.5s;
+}
+.atemporalis-bulletin-title a:hover {
+  color: var(--accent);
+}
+.darkmode .atemporalis-bulletin-title a:hover {
+  text-shadow: var(--lightOutline);
+}
+.atemporalis-bulletin-blurb {
+  border-top: solid 1px var(--bgInverse);
+  padding-top: 20px;
+  font: 13px / 20px var(--body);
+  text-align: justify;
+  letter-spacing: 0.25px;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+.atemporalis-bulletin-blurb i {
+  color: var(--bg1);
+  text-shadow: var(--darkOutline);
+  font-size: 65px;
+}
+.atemporalis-bulletin-blurb a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800 !important;
+  color: var(--accent);
+  transition: color 0.5s;
+}
+.atemporalis-bulletin-blurb a:hover {
+  color: var(--bgInverse);
+}
+@media (max-width: 1365px) {
+  .atemporalis-board1.atemporalis-bulletin {
+    padding-left: 15px;
+  }
+  .atemporalis-bulletin2 {
+    display: none;
+  }
+}
+
+.atemporalis-cat2 {
+  border-top: solid 1px var(--bgInverse);
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  position: relative;
+  padding-right: 15px;
+}
+.atemporalis-cat2-title {
+  grid-column: 1 / 3;
+  border-bottom: solid 1px var(--bgInverse);
+  padding: 35px 0px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-right: -15px;
+}
+.atemporalis-cat2-title b {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  mask-image: var(--atemporalisRender);
+  mask-size: 98% auto;
+  mask-repeat: no-repeat;
+  mask-position: center -650px;
+  -webkit-mask-image: var(--atemporalisCat);
+  -webkit-mask-size: 98% auto;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center -650px;
+}
+.atemporalis-cat2-title b::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: var(--accent);
+}
+.atemporalis-cat2-title div {
+  background-color: var(--bgInverse2);
+  color: var(--bg1);
+  font: 19px / 10px var(--titleEB);
+  text-transform: uppercase;
+  padding: 20px 23px 25px 25px;
+  outline: solid 2px var(--bg1);
+  outline-offset: -3px;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 1;
+}
+.darkmode .atemporalis-cat2-title div {
+  background-color: var(--bgInverse3);
+}
+
+.atemporalis-board-ship {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 35px;
+  border-bottom: solid 1px var(--bgInverse);
+  padding: 20px 15px 50px 15px;
+  margin-right: -15px;
+}
+.atemporalis-board-ship-title {
+  display: block;
+  border: solid 1px var(--bgInverse);
+  margin: -36px 0px 0px -15px;
+  margin: 0px;
+  background-color: var(--bgInverse2);
+  box-shadow: inset 0px 0px 0px 4px var(--bg1);
+  padding: 4px;
+  text-decoration: none;
+  color: var(--bg1);
+  transition: color 0.5s;
+}
+.atemporalis-board-ship-title div {
+  background-color: var(--bgInverse);
+  background-image: var(--atemporalisRender2);
+  background-size: cover;
+  background-position: center bottom;
+  mix-blend-mode: lighten;
+  transition: background-color 0.5s;
+}
+.atemporalis-board-ship:hover .atemporalis-board-ship-title div {
+  background-color: var(--accent);
+}
+.atemporalis-board-ship-title b {
+  padding: 15px 30px 35px 30px;
+  text-align: center;
+  display: block;
+  font: 50px / 40px var(--titleEB);
+  transition: text-shadow 0.5s;
+}
+.atemporalis-board-ship:hover .atemporalis-board-ship-title b {
+  text-shadow: var(--darkOutline), 0px 0px 20px var(--bgInverse2),
+    0px 0px 35px var(--bgInverse2);
+}
+.darkmode .atemporalis-board-ship-title {
+  mix-blend-mode: lighten;
+  color: var(--accent);
+}
+.darkmode .atemporalis-board-ship-title div {
+  mix-blend-mode: normal;
+  background-color: var(--bg2);
+}
+.darkmode .atemporalis-board-ship:hover .atemporalis-board-ship-title div {
+  background-color: var(--bg3);
+}
+.darkmode .atemporalis-board-ship:hover .atemporalis-board-ship-title b {
+  text-shadow: none;
+}
+.atemporalis-board-ship-sub {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0px 0px 0px;
+}
+.atemporalis-board-ship-sub a {
+  border: solid 1px var(--bgInverse);
+  text-decoration: none;
+  flex-grow: 1;
+  text-align: center;
+  text-transform: uppercase;
+  font: 800 11px / 9px var(--body);
+  padding: 14px 19px;
+  letter-spacing: 1px;
+  color: var(--bgInverse);
+  text-shadow: var(--lightOutline);
+  outline: solid 2px var(--bg1);
+  outline-offset: -3px;
+  background: linear-gradient(-135deg, transparent 30%, var(--accent));
+  background-size: 400% 100%;
+  background-position: 99% 0%;
+  transition: background-position 0.5s, color 0.5s;
+}
+.atemporalis-board-ship-sub a:hover {
+  background-position: 65% 0%;
+  color: var(--accent);
+}
+
+.atemporalis-board-ship-groups {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+.atemporalis-board-ship-groups a {
+  display: block;
+  border: solid 1px var(--bgInverse);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: var(--bgInverse);
+  text-align: right;
+  background: linear-gradient(-135deg, var(--bg2) 30%, var(--accent));
+  background-size: 400% 100%;
+  background-position: 65% 0%;
+  font: 800 11px / 9px var(--body);
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  text-shadow: var(--lightOutline);
+  transition: color 0.5s;
+}
+.darkmode .atemporalis-board-ship-groups a {
+  background-position: 80% 0%;
+}
+.atemporalis-board-ship-groups a::before {
+  content: "";
+  display: block;
+  background-color: var(--bgInverse);
+  content: "00";
+  bottom: 17px;
+  right: 17px;
+  position: absolute;
+  text-shadow: none;
+  color: var(--bg1);
+  padding: 5px;
+  letter-spacing: 1px;
+  z-index: 1;
+  box-shadow: 0px 0px 0px 1px var(--bg1);
+  transition: color 0.5s, background-color 0.5s;
+}
+.atemporalis-board-ship-groups a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  outline: solid 4px var(--bg1);
+  outline-offset: -4px;
+}
+.atemporalis-board-ship-groups a i {
+  color: var(--accent);
+  font-size: 50px;
+  display: block;
+  margin-bottom: 5px;
+  position: absolute;
+  bottom: -13px;
+  left: -13px;
+}
+.atemporalis-board-ship-groups a b {
+  padding: 18px 17px;
+  text-transform: uppercase;
+}
+.atemporalis-board-ship-groups a:hover,
+.atemporalis-board-ship-groups a:hover::before {
+  color: var(--accent);
+}
+.darkmode .atemporalis-board-ship-groups a::before {
+  background-color: var(--bgInverse2);
+  color: var(--bg1) !important;
+}
+.darkmode .atemporalis-board-ship-groups a:hover::before {
+  background-color: var(--accent);
+}
+@media (max-width: 1575px) {
+  .atemporalis-board-ship-groups a b {
+    display: none;
+  }
+  .atemporalis-board-ship-groups a::before {
+    top: 17px;
+    bottom: auto;
+  }
+}
+
+.atemporalis-board3 {
+  grid-column: 1 / 3;
+  border: solid 1px var(--bgInverse);
+  margin: 0px -15px -15px 0px;
+  padding: 9px;
+  background-color: var(--bgInverse);
+  outline: solid 9px var(--bg1);
+  outline-offset: -10px;
+}
+.atemporalis-board3 div {
+  height: 200px;
+  background-color: var(--accent);
+  background-image: var(--atemporalisBorder);
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: lighten;
+  background-blend-mode: multiply;
+}
+.darkmode .atemporalis-board3 {
+  mix-blend-mode: lighten;
+}
+.darkmode .atemporalis-board3 div {
+  mix-blend-mode: normal;
+}
+
+.atemporalis-board2:nth-child(odd) {
+  border-left: none;
+  padding-left: 15px;
+}
+
+.atemporalis-board2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: flex-start;
+  border-left: solid 1px var(--bgInverse);
+  padding-left: 40px;
+  position: relative;
+}
+.atemporalis-board2:nth-child(5),
+.atemporalis-board2:nth-child(6) {
+  margin-top: -35px;
+}
+.atemporalis-board2 .atemporalis-board1-name {
+  grid-column: 1 / 3;
+}
+.atemporalis-board2 .atemporalis-board1-recent {
+  margin-top: -30px;
+}
+.atemporalis-board2 .atemporalis-board1-desc {
+  grid-row: 2 / 5;
+  grid-column: 2 / 3;
+  max-height: 120px;
+}
+@media (max-width: 1149px) {
+  .atemporalis-cat2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 0px;
+  }
+  .atemporalis-cat2-title {
+    margin-right: 0px;
+    margin-bottom: -16px;
+  }
+  .atemporalis-board-ship {
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    padding-bottom: 25px;
+    margin-right: 0px;
+  }
+  .atemporalis-board-ship-sub {
+    flex-wrap: wrap;
+  }
+  .atemporalis-board-ship-groups {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .atemporalis-board-ship-groups a {
+    height: 53px;
+    flex-grow: 1;
+    min-width: 100px;
+  }
+  .atemporalis-board2 {
+    border-left: none;
+    border-top: solid 1px var(--bgInverse);
+    padding: 15px 15px 0px 15px;
+  }
+  .atemporalis-board2::before {
+    right: 0px;
+    top: 15px;
+  }
+  .atemporalis-board3 {
+    margin-right: 0px;
+    margin-bottom: -16px;
+  }
+  .atemporalis-board2:nth-child(5),
+  .atemporalis-board2:nth-child(6) {
+    margin-top: 0px;
+  }
+  .atemporalis-board2 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .atemporalis-board2 .atemporalis-board1-recent {
+    margin-top: 0px;
+  }
+}
+
+.atemporalis-board-ic {
+  border: solid 1px var(--bgInverse);
+  padding: 24px;
+  background: linear-gradient(to bottom, transparent 15px, var(--accent));
+  background-size: 400% 400%;
+  outline: solid 4px var(--bg1);
+  outline-offset: -5px;
+}
+
+.atemporalis-stats {
+  border-top: solid 1px var(--bgInverse);
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 35px;
+  position: relative;
+  padding: 0px 15px;
+}
+.atemporalis-stats .atemporalis-cat2-title {
+  margin-left: -15px;
+  grid-column: 1 / 4;
+}
+.atemporalis-stats-users {
+  display: grid;
+  gap: 30px;
+  padding: 2px 0px 15px 0px;
+}
+.atemporalis-stats-users h1 {
+  border-bottom: solid 1px var(--accent);
+  display: flex;
+  gap: 15px;
+  height: 5px;
+  margin: 10px 0px 0px 0px;
+}
+.atemporalis-stats-users h1 div {
+  background-color: var(--bg1);
+  padding: 0px 10px 0px 13px;
+  font: 800 10px / 10px var(--body);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: -5px;
+}
+.atemporalis-stats-users h1 div:nth-child(1) {
+  font: 26px / 10px var(--titleEB);
+  text-transform: lowercase;
+  color: var(--accent);
+  padding: 0px 10px 5px 0px;
+  margin-top: -6px;
+}
+.atemporalis-stats-users1 {
+  font: 800 13px / 20px var(--body);
+  text-transform: uppercase;
+}
+.atemporalis-stats-users1 a {
+  font: 800 13px / 20px var(--body);
+  text-decoration: none;
+  color: var(--accent);
+  transition: color 0.5s;
+}
+.atemporalis-stats-users1 a:hover {
+  color: var(--bgInverse);
+}
+.atemporalis-stats-users1-icons {
+  font-size: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.atemporalis-stats-users1-icons a {
+  display: block;
+  border: solid 1px var(--bgInverse);
+  background-color: var(--bgInverse);
+  height: 58px;
+  width: 58px;
+  outline: solid 2px var(--bg1);
+  outline-offset: -3px;
+}
+.atemporalis-stats-users1-icons div {
+  height: 54px;
+  width: 54px;
+  margin: 2px;
+  background-color: var(--accent);
+  background-image: var(--atemporalisIcon);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: lighten;
+  transition: background-color 0.5s;
+}
+.atemporalis-stats-users1-icons div:hover {
+  background-color: #fff;
+}
+.darkmode .atemporalis-stats-users1 a:hover {
+  color: var(--bgInverse3);
+}
+.darkmode .atemporalis-stats-users1-icon a {
+  mix-blend-mode: lighten;
+}
+.darkmode .atemporalis-stats-users1-icons div {
+  mix-blend-mode: normal;
+}
+.atemporalis-stats-users2 {
+  background-color: var(--bgInverse);
+  height: 100%;
+}
+.atemporalis-stats-users3 {
+  position: relative;
+}
+.atemporalis-stats-rec-title {
+  background-color: var(--bgInverse);
+  border: solid 1px var(--bgInverse);
+  outline: solid 4px var(--bg1);
+  outline-offset: -5px;
+  margin-top: 15px;
+}
+.atemporalis-stats-rec-title div {
+  mix-blend-mode: lighten;
+  background-color: var(--accent);
+  background-image: var(--atemporalisBorder);
+  background-position: center;
+  padding: 20px 0px 35px 25px;
+  font: 40px / 20px var(--titleEB);
+  color: var(--bg1);
+  text-shadow: var(--darkOutline);
+}
+.atemporalis-stats-rec {
+  overflow: auto;
+  max-height: 470px;
+  margin-top: 20px;
+  display: grid;
+  gap: 25px;
+  padding-right: 35px;
+  scrollbar-color: var(--accent) transparent;
+  scrollbar-width: thin;
+}
+.atemporalis-stats-rec1 {
+  border-top: solid 1px var(--accent);
+  padding: 25px 15px 0px 15px;
+  text-transform: uppercase;
+  font: 800 11px / 9px var(--body);
+  letter-spacing: 1px;
+  position: relative;
+}
+.atemporalis-stats-rec1::before {
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+  bottom: -15px;
+  left: 0px;
+  right: 0px;
+  background: linear-gradient(-135deg, transparent 30%, var(--accent));
+  background-size: 400% 100%;
+  background-position: 99% 0%;
+  transition: background-position 0.5s, color 0.5s;
+}
+.atemporalis-stats-rec1:hover::before {
+  background-position: 75% 0%;
+  color: var(--accent);
+}
+.atemporalis-stats-rec1:first-of-type {
+  border-top: none;
+  padding-top: 15px;
+}
+.atemporalis-stats-rec1:first-of-type::before {
+  top: 0px;
+}
+.atemporalis-stats-rec1 a {
+  text-decoration: none;
+  color: var(--bgInverse);
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to right, var(--accent), var(--accent));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.5s, color 0.5s;
+  padding-bottom: 2px;
+}
+.atemporalis-stats-rec1:hover a {
+  background-size: 100% 1px;
+}
+.atemporalis-stats-rec1 a:first-of-type {
+  background: none !important;
+  color: var(--accent);
+  display: block;
+  font: 21px / 15px var(--titleEB);
+  font: 18px / 15px var(--title2);
+  margin: -5px 0px 6px 0px;
+  letter-spacing: 0px;
+  max-height: 30px;
+  padding-bottom: 5px;
+  background: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.atemporalis-stats-rec1:hover a {
+  color: var(--bgInverse) !important;
+}
+.atemporalis-stats-rec-flower {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  right: 70px;
+}
+.atemporalis-stats-rec-flower li:nth-child(1) {
+  display: block;
+  height: 60px;
+  width: 88px;
+  position: absolute;
+  -webkit-mask-image: var(--roseFill);
+  mask-image: var(--roseFill);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.atemporalis-stats-rec-flower li:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg2);
+}
+.atemporalis-stats-rec-flower li:nth-child(2) {
+  display: block;
+  height: 60px;
+  width: 88px;
+  position: absolute;
+  -webkit-mask-image: var(--roseImg);
+  mask-image: var(--roseImg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.atemporalis-stats-rec-flower li:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bgInverse2);
+}
+.darkmode .atemporalis-stats-rec-title {
+  mix-blend-mode: lighten;
+}
+.darkmode .atemporalis-stats-rec-title div {
+  mix-blend-mode: normal;
+  background-color: var(--bg2);
+  text-shadow: var(--lightOutline);
+  color: var(--accent);
+}
+.darkmode .atemporalis-stats-rec-flower li:nth-child(1)::before {
+  background-color: var(--bg1);
+}
+.darkmode .atemporalis-stats-rec-flower li:nth-child(2)::before {
+  background-color: var(--accent);
+}
+
+.atemporalis-stats-num {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.atemporalis-stats-num h1 {
+  grid-column: 1 / 3;
+}
+.atemporalis-stats-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.atemporalis-stats-links a {
+  white-space: nowrap;
+  border: solid 1px var(--bgInverse);
+  text-decoration: none;
+  flex-grow: 1;
+  text-align: center;
+  text-transform: uppercase;
+  font: 800 11px / 9px var(--body);
+  padding: 14px;
+  letter-spacing: 1px;
+  color: var(--bgInverse);
+  text-shadow: var(--lightOutline);
+  outline: solid 2px var(--bg1);
+  outline-offset: -3px;
+  background: linear-gradient(-135deg, transparent 30%, var(--accent));
+  background-size: 400% 100%;
+  background-position: 99% 0%;
+  transition: background-position 0.5s, color 0.5s;
+}
+.atemporalis-stats-links a:hover {
+  background-position: 65% 0%;
+  color: var(--accent);
+}
+.atemporalis-stats-num2 {
+  align-self: center;
+  font: 13px / 20px var(--body);
+  text-align: justify;
+  letter-spacing: 0.25px;
+  max-height: 80px;
+  overflow: auto;
+  padding-right: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+.atemporalis-stats-num2 b {
+  color: var(--accent);
+}
+
+.atemporalis-stats-aff {
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: 717px auto;
+  gap: 35px;
+  padding-top: 35px;
+  border-top: solid 1px var(--bgInverse);
+  margin: 0px -15px;
+}
+.atemporalis-stats-aff-left {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  grid-auto-flow: column;
+  justify-content: flex-start;
+}
+.atemporalis-stats-aff-left div {
+  height: 31px;
+  width: 88px;
+  border: solid 1px var(--bgInverse);
+  padding: 2px;
+  outline: solid 2px var(--bg1);
+  outline-offset: -3px;
+  background-color: var(--bgInverse);
+}
+.atemporalis-stats-aff-left div a {
+  display: block;
+  mix-blend-mode: lighten;
+}
+.atemporalis-stats-aff-left div a img {
+  height: 31px;
+  width: 88px;
+  filter: grayscale(100%) contrast(80%);
+  transition: filter 0.5s;
+}
+.atemporalis-stats-aff-left div:hover a img {
+  filter: grayscale(0%) contrast(100%);
+}
+.atemporalis-stats-aff-right {
+  border-left: solid 1px var(--bgInverse);
+  position: relative;
+}
+.atemporalis-stats-aff-right a {
+  display: block;
+  border: solid 1px var(--bgInverse);
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 35px;
+  right: 0px;
+  background-color: var(--bgInverse);
+  outline: solid 4px var(--bg1);
+  outline-offset: -5px;
+}
+.atemporalis-stats-aff-right div {
+  height: 100%;
+  width: 100%;
+  background-color: var(--accent);
+  mix-blend-mode: lighten;
+  background-image: var(--atemporalisRender2);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  transition: background-color 0.5s;
+}
+.atemporalis-stats-aff-right div:hover {
+  background-color: #fff;
+}
+.darkmode .atemporalis-stats-aff-left div {
+  background-color: var(--bg2);
+}
+.darkmode .atemporalis-stats-aff-left div,
+.darkmode .atemporalis-stats-aff-right a {
+  mix-blend-mode: lighten;
+}
+.darkmode .atemporalis-stats-aff-left a,
+.darkmode .atemporalis-stats-aff-right div {
+  mix-blend-mode: normal;
+}
+@media (max-width: 1149px) {
+  .atemporalis-stats {
+    display: flex;
+    flex-direction: column;
+  }
+  .atemporalis-stats-users {
+    margin-top: 25px;
+  }
+  .atemporalis-stats-num {
+    display: flex;
+    flex-direction: column;
+  }
+  .atemporalis-stats-users3 {
+    margin-top: -50px;
+    padding-top: 15px;
+    border-top: solid 1px var(--bgInverse);
+  }
+  .atemporalis-stats-aff {
+    display: flex;
+    flex-direction: column;
+  }
+  .atemporalis-stats-aff-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .atemporalis-stats-aff-right {
+    border-left: 0px;
+  }
+  .atemporalis-stats-aff-right a {
+    position: relative;
+    height: 150px;
+    left: 0px;
+  }
+}
+
+/*CONTENT STYLES*/
+
+header {
+  height: 160px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0));
+}
+&:after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  height: 50px;
+  background: rgba(white, 0.5);
+  filter: blur(4px);
+}
+
+.title {
+  position: sticky;
+  top: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: minmax(0, 100px) 1fr;
+  width: 100%;
+  padding-right: 20px;
+  max-width: 90px;
+}
+div {
+  line-height: 1.3em;
+}
+
+section {
+  background-color: transparent;
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  display: grid;
+  grid-template-columns: minmax(0, 100px) 1fr;
+  width: 100%;
+  padding: 20px 20px;
+  padding-left: 0;
+  /* box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5); */
+}
+
+.ornament {
+  max-width: 90px;
+  position: fixed;
+}
+
+/* For Firefox */
+::-moz-selection {
+  background-color: #333333;
+  color: #fff; /* Darker green text - high contrast */
+  text-shadow: none; /* Remove any default text shadow */
+}
+
+/* For other browsers (Chrome, Safari, Edge, etc.) */
+::selection {
+  background-color: #333333;
+  color: #fff;
+  text-shadow: none;
+}
+
+#visitor-count {
+  font-weight: bold; /* Keep your existing style */
+}
+
+.visitor-count {
+  font-size: small;
+}
+
+p {
+  font-size: clamp(
+    0.8rem,
+    2vw,
+    1.2rem
+  ); /* Responsive font size for the whole paragraph */
+}
+
+.responsive-heading {
+  font-weight: lighter; /* Keep your existing style */
+  font-size: 5vw; /* Adjust the 5vw as needed.  This is the key! */
+  /*  Good practice to add a fallback for older browsers */
+  font-size: calc(1em + 1vw); /* Fallback + scaling.  Adjust values. */
+  font-family: "Crimson Text";
+}
+
+.responsive-heading a {
+  text-decoration: underline;
+  color: inherit;
+  /* text-spacing-trim is not a standard CSS property.  Are you sure about this?*/
+  /* If you meant to control spacing, consider letter-spacing or word-spacing */
+  /* letter-spacing: 0.05em;  Example of letter-spacing */
+}
+
+#date-container p {
+  font-size: x-small;
+}
+
+/* Media query for phone-sized screens */
+@media (max-width: 1200px) {
+  /* Adjust 767px if needed */
+  .ornament,
+  #date-container,
+  #visitor-count {
+    display: none; /* Hide the elements */
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small Screens (Phones) */
+@media (max-width: 767px) {
+  .responsive-heading {
+    font-size: 2em; /* Smaller font size on phones */
+  }
+  .container {
+    padding: 0 10px; /* Reduce padding for smaller screens */
+  }
+}
+/* Medium Screens (Tablets)*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .responsive-heading {
+    font-size: 2.2em;
+  }
+}
