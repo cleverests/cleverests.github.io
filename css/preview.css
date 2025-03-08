@@ -1,0 +1,84 @@
+#buzzoms-preview,
+#insanedeals-preview,
+#keralaonroad-preview {
+    background-position: right 0 bottom 10%;
+}
+
+.card-whipe,
+.testimonial-gif {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .card-whipe {
+    background-image: url("https://x.com/x.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+#no-whipe-img {
+    background-image: none;
+}
+
+
+#skillsunion-preview {
+    background-image: url("../assets-c/1.jpg");
+}
+
+#vtf-preview {
+    /* background-image: url("https://x.com/x1.svg"); */
+    background-image: url("../assets-c/image.png");
+}
+
+#mausumi-preview {
+    background-image: url("../assets-c/star.png");
+}
+
+#nowiverse-preview {
+    background-image: url("../assets-c/plato-t-23.jpg");
+}
+
+#vocal-preview {
+    background-image: url("../assets-c/andrew-collection.jpg");
+}
+
+#greenfox-preview {
+    background-image: url("../assets-c/cleverest-t-leah.jpg");
+}
+
+#allbodies-preview {
+    background-image: url("../assets-c/alotofsheeps.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+#buzzoms-preview {
+    background-image: url("../assets-c/cleverest-t-paint-.jpg");
+}
+
+#fathom-preview {
+    background-image: url("../assets-c/countryfield.jpg");
+}
+
+#biobot-preview {
+    background-image: url("../assets-c/pathton.jpg");
+}
+
+#stamurai-preview {
+    background-image: url("../assets-c/weather.jpg");
+    background-position: right 0 bottom 15%;
+}
+
+#insanedeals-preview {
+    background-image: url("../assets-c/workingpersons.jpg");
+}
+
+#keralaonroad-preview {
+    background-image: url("../assets-c/wallstickwire.jpg");
+}
+
+.testimonial-gif {
+    background-position: center center;
+    background-image: url("../assets-c/horsesj.jpg");
+}
