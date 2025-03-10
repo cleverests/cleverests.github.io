@@ -36,6 +36,18 @@
         overflow: hidden;
         user-select: none;
     }
+
+    /* For older Firefox versions (before 34) */
+    ::-moz-selection {
+      background: #333;
+      color: #000;
+    }
+    
+    /* For newer browsers (including Firefox 34+) and other browsers */
+    ::selection {
+      background: #333;
+      color: #000;
+    }
 </style>
 <style>#page-loader{display:flex}/*! locomotive-scroll v3.1.7 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */html.has-scroll-smooth{overflow:hidden}html.has-scroll-dragging{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.has-scroll-smooth body{overflow:hidden}.has-scroll-smooth [data-scroll-container]{min-height:100vh}.c-scrollbar{z-index:5000;position:absolute;right:0;top:0;width:7px;height:100vh;transform-origin:center right;transition:transform .3s,opacity .3s;opacity:0}.c-scrollbar:hover{transform:scaleX(1.45)}.c-scrollbar:hover,.has-scroll-dragging .c-scrollbar,.has-scroll-scrolling .c-scrollbar{opacity:1}.c-scrollbar_thumb{position:absolute;top:0;right:0;background-color:#d2d2d2;opacity:100%;width:5px;margin:0;cursor:-webkit-grab;cursor:grab}.has-scroll-dragging .c-scrollbar_thumb{cursor:-webkit-grabbing;cursor:grabbing}</style>
 <style>::-webkit-scrollbar{display:none}*{-ms-overflow-style:none;scrollbar-width:none}.cs1-trigger,.cs10-trigger,.cs11-trigger,.cs12-trigger,.cs13-trigger,.cs2-trigger,.cs3-trigger,.cs4-trigger,.cs5-trigger,.cs6-trigger,.cs7-trigger,.cs8-trigger,.cs9-trigger{display:none}.cs1-close-trigger,.cs10-close-trigger,.cs11-close-trigger,.cs12-close-trigger,.cs13-close-trigger,.cs2-close-trigger,.cs3-close-trigger,.cs4-close-trigger,.cs5-close-trigger,.cs6-close-trigger,.cs7-close-trigger,.cs8-close-trigger,.cs9-close-trigger{display:none}.drag-demo-container{display:flex}.matter-js-canvas{display:block;height:100%;width:100%;margin:0;overflow:hidden;position:absolute;top:0;bottom:0;left:0;right:0;pointer-events:none}.animword{display:inline-block}.animword{white-space:nowrap}.fade-up .animword{opacity:0}.fade-up2 .animword{opacity:0}.fade-up3 .animword{opacity:0}.fade-up4 .animword{opacity:0}.fade-up5 .animword{opacity:0}.fade-up6 .animword{opacity:0}.fade-up7 .animword{opacity:0}.fade-up8 .animword{opacity:0}</style>
